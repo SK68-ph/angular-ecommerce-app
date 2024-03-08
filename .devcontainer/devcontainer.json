@@ -1,0 +1,17 @@
+{
+  "name": "My Node.js Project",
+  "version": "0.2.0",
+
+  // ... other configurations
+
+  "build": {
+    "dockerfile": "Dockerfile"  // Path to your Dockerfile (optional)
+  },
+  "appPort": [3000],  // Port(s) to expose (optional)
+
+  "serviceList": [
+    {
+      "image": "node:16-alpine"
+    }
+  ]
+}
