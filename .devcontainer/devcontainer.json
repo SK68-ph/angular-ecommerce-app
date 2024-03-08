@@ -1,17 +1,12 @@
 {
-  "name": "My Node.js Project",
-  "version": "0.2.0",
-
-  // ... other configurations
-
-  "build": {
-    "dockerfile": "Dockerfile"  // Path to your Dockerfile (optional)
-  },
-  "appPort": [3000],  // Port(s) to expose (optional)
-
-  "serviceList": [
-    {
-      "image": "node:16-alpine"
-    }
-  ]
+  "name": "My Node.js Codespace",
+  "context": "folder",
+  "extensions": [
+    "ms-vscode.nodejs-pack"
+  ],
+  "settings": {},
+  "apps": [],
+  "scripts": {
+    "postCreateCommand": "curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt-get install -y nodejs"
+  }
 }
